@@ -15,8 +15,8 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 3. [Other platforms](#other_platforms)
 4. [Get in contact with our team](#contact)
 
-## Veryfi Lens Android Examples <a name="example"></a>
-You can find the demo project in this repository. You can also check the development documentation clicking on each one of them.
+## Veryfi Lens Long Receipts Android Examples <a name="example"></a>
+You can find the demo project in this repository. You can also check the development documentation
 - [Lens for Long Receipts](Documentation/AndroidLensLongReceipts.pdf)
 
 ### Configuration <a name="configuration"></a>
