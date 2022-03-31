@@ -10,14 +10,22 @@ Lens is built in native code and optimized for fast performance, clean user expe
 You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
 
 ## Table of content
-1. [Veryfi Lens Long Receipt Android Demo](#example)
+1. [Veryfi Lens Android Examples](#examples)
 2. [Configuration](#configuration)
 3. [Other platforms](#other_platforms)
 4. [Get in contact with our team](#contact)
 
 ## Veryfi Lens Long Receipts Android Example <a name="example"></a>
-You can find the demo project in this repository. You can also check the development documentation
-- [Lens for Long Receipts](Documentation/AndroidLensLongReceipts.pdf)
+You can find the demo project in this repository. You can also check the development documentation.
+- [Lens for Long Receipts]()
+## Other Lens Android Examples <a name="examples"></a>
+This is an example of how to use Veryfi Lens Long Receipts in your app, you can find the developer documentation [here](AndroidLensLongReceipts.pdf).
+You can find five example projects, which are the five versions of Lens that we currently offer:
+- [Lens for Long Receipts](https://github.com/veryfi/veryfi-lens-long-receipts-android-demo)
+- [Lens for Receipts](https://github.com/veryfi/veryfi-lens-receipts-android-demo)
+- [Lens for Credit Cards](https://github.com/veryfi/veryfi-lens-credit-cards-android-demo)
+- [Lens for Business Cards](https://github.com/veryfi/veryfi-lens-business-cards-android-demo)
+- [Lens for Checks](https://github.com/veryfi/veryfi-lens-checks-android-demo)
 
 ## Table of content
 1. [Veryfi Lens Android Examples](#examples)
