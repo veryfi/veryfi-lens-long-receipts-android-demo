@@ -14,9 +14,9 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.rarepebble.colorpicker.ColorPickerView
 import com.veryfi.lens.VeryfiLens
-import com.veryfi.lens.VeryfiLensCredentials
-import com.veryfi.lens.VeryfiLensSettings
 import com.veryfi.lens.helpers.DocumentType
+import com.veryfi.lens.helpers.VeryfiLensCredentials
+import com.veryfi.lens.helpers.VeryfiLensSettings
 import com.veryfi.lens.longreceipts.demo.databinding.ActivityMainBinding
 import com.veryfi.lens.longreceipts.demo.helpers.ThemeHelper
 import com.veryfi.lens.longreceipts.demo.logs.LogsActivity
@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
     private var confidenceDetailsIsOn = veryfiLensSettings.confidenceDetailsIsOn
     private var parseAddressIsOn = veryfiLensSettings.parseAddressIsOn
     private var externalId = veryfiLensSettings.externalId ?: ""
+    private var gpuIsOn = veryfiLensSettings.gpuIsOn
 
     override fun onStart() {
         super.onStart()
@@ -127,6 +128,7 @@ class MainActivity : AppCompatActivity() {
         viewBinding.switchIsProduction.isChecked = isProduction
         viewBinding.switchConfidenceDetails.isChecked = confidenceDetailsIsOn
         viewBinding.switchParseAddress.isChecked = parseAddressIsOn
+        viewBinding.switchGpu.isChecked = gpuIsOn
         initColors()
         initFloatValues()
         initStringValues()
@@ -278,6 +280,10 @@ class MainActivity : AppCompatActivity() {
             parseAddressIsOn = isChecked
         }
 
+        viewBinding.switchGpu.setOnCheckedChangeListener { _, isChecked ->
+            gpuIsOn = isChecked
+        }
+
         viewBinding.imgPrimaryColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
@@ -299,19 +305,19 @@ class MainActivity : AppCompatActivity() {
         viewBinding.imgSubmitBackgroundColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            showDialog(submitButtonBackgroundColor, 3)
+            submitButtonBackgroundColor?.let { it1 -> showDialog(it1, 3) }
         }
 
         viewBinding.imgSubmitBorderColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            showDialog(submitButtonBorderColor, 4)
+            submitButtonBorderColor?.let { it1 -> showDialog(it1, 4) }
         }
 
         viewBinding.imgSubmitFontColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            showDialog(submitButtonFontColor, 5)
+            submitButtonFontColor?.let { it1 -> showDialog(it1, 5) }
         }
 
         viewBinding.imgDocDetectStrokeColor.setOnClickListener {
@@ -352,7 +358,7 @@ class MainActivity : AppCompatActivity() {
         materialAlertDialogBuilder.setView(customAlertDialogView)
             .setTitle(resources.getString(R.string.settings_set_color_title))
             .setPositiveButton(resources.getString(R.string.btn_ok)) { dialog, _ ->
-                val colorSelected = "#".plus(formatColor(colorPickerView.color).toString())
+                val colorSelected = "#".plus(formatColor(colorPickerView.color))
 
                 when (typeColor) {
                     0 -> {
@@ -502,6 +508,7 @@ class MainActivity : AppCompatActivity() {
         veryfiLensSettings.isProduction = isProduction
         veryfiLensSettings.confidenceDetailsIsOn = confidenceDetailsIsOn
         veryfiLensSettings.parseAddressIsOn = parseAddressIsOn
+        veryfiLensSettings.gpuIsOn = gpuIsOn
         veryfiLensSettings.externalId = externalId
         veryfiLensSettings.documentTypes = arrayListOf(DocumentType.LONG_RECEIPT)
         veryfiLensSettings.showDocumentTypes = true
@@ -521,7 +528,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, LogsActivity::class.java))
     }
 
-    private fun formatColor(color: Int): String? {
+    private fun formatColor(color: Int): String {
         return String.format("%08x", color)
     }
 }
