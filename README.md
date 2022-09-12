@@ -20,7 +20,7 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 4. [Get in contact with our team](#contact)
 
 ## Veryfi Lens Long Receipts Android Example <a name="example"></a>
-![long_receipt](https://user-images.githubusercontent.com/46335146/163218484-77f81b77-c489-4ca1-8896-9f644c02facb.gif)
+![LensLongReceiptsDemo](https://user-images.githubusercontent.com/30125790/189675233-27695073-5b53-42c4-8635-4f0ad48107a7.gif)
 
 ## Other Lens Android Examples <a name="examples"></a>
 This is an example of how to use Veryfi Lens Long Receipts in your app, you can find the developer documentation [here](AndroidLensLongReceipts.pdf).
