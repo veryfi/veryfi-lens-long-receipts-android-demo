@@ -331,31 +331,31 @@ class MainActivity : AppCompatActivity() {
         viewBinding.imgDetectFillColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            showDialog(docDetectFillUIColor, 2)
+            showDialog(docDetectFillUIColor, 6)
         }
 
         viewBinding.imgSubmitBackgroundColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            submitButtonBackgroundColor?.let { it1 -> showDialog(it1, 3) }
+            showDialog(submitButtonBackgroundColor, 7)
         }
 
         viewBinding.imgSubmitBorderColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            submitButtonBorderColor?.let { it1 -> showDialog(it1, 4) }
+            showDialog(submitButtonBorderColor, 8)
         }
 
         viewBinding.imgSubmitFontColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            submitButtonFontColor?.let { it1 -> showDialog(it1, 5) }
+            showDialog(submitButtonFontColor, 9)
         }
 
         viewBinding.imgDocDetectStrokeColor.setOnClickListener {
             customAlertDialogView = LayoutInflater.from(this)
                 .inflate(R.layout.fragment_color_picker, null, false)
-            showDialog(docDetectStrokeUIColor, 6)
+            showDialog(docDetectStrokeUIColor, 10)
         }
 
         viewBinding.txtCornerRadius.setOnClickListener {
@@ -444,7 +444,7 @@ class MainActivity : AppCompatActivity() {
             0 -> {
                 titleDialog = resources.getString(R.string.settings_set_submit_button_corner_radius)
                 barSliderView.valueFrom = 0.0f
-                barSliderView.valueTo = 20.0f
+                barSliderView.valueTo = 30.0f
                 barSliderView.stepSize = 1.0f
             }
             1 -> {
