@@ -152,6 +152,7 @@ class LogsActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         //do nothing
     }
