@@ -5,12 +5,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonParser
 import com.lriccardo.timelineview.TimelineDecorator
 import com.veryfi.lens.VeryfiLens
 import com.veryfi.lens.VeryfiLensDelegate
@@ -73,12 +70,7 @@ class LogsActivity : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     private fun showLogs(json: JSONObject) {
         val log = Log()
-        val jsonString = json.toString()
-        val jsonParser = JsonParser()
-        val jsonElement = jsonParser.parse(jsonString)
-        val gson = GsonBuilder().setPrettyPrinting().create()
-        val prettyJsonString = gson.toJson(jsonElement)
-        log.message = prettyJsonString
+        log.message = json
         val status = if (json.has(STATUS)) json.getString(STATUS) else ""
 
         when (status) {
