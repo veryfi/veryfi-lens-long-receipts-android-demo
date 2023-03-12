@@ -48,7 +48,7 @@ android {
 }
 
 dependencies {
-    //noinspection GradleDependency
+    // noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -57,5 +57,5 @@ dependencies {
     implementation 'com.github.pvarry:android-json-viewer:v1.1'
 
     //Veryfi lens
-    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.0.3'
+    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.0.4'
 }
