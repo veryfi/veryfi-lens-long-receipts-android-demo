@@ -28,7 +28,7 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 ## Veryfi Lens Long Receipts & Invoices Android Example <a name="example"></a>
 This is an example of how to use Veryfi Lens Long Receipts & Invoices in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/android/).
 
-![LensReceiptsDemo](https://user-images.githubusercontent.com/30125790/189672011-1ec94287-80c2-4512-bc65-878b0a5dfd8b.gif)
+![LensReceiptsDemo](long-receipt-demo.gif)
 
 ## How to add Veryfi Lens Long Receipts to your project <a name="maven"></a>
 
@@ -38,7 +38,7 @@ package manager for Java.
 Add in your project build.gradle file the Veryfi Lens Long Receipts android SDK dependency:
 ```ruby
 dependencies {
-    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.0.8'
+    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.0.9'
 }
 ```
 
