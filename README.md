@@ -38,7 +38,7 @@ package manager for Java.
 Add in your project build.gradle file the Veryfi Lens Long Receipts android SDK dependency:
 ```ruby
 dependencies {
-    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.1.7'
+    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:1.7.1.9'
 }
 ```
 Min SDK Android 6.0 (API level 23)
