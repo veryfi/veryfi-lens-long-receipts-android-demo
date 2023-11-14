@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
     private var emailCCIsOn = veryfiLensSettings.emailCCIsOn
     private var emailCCDomain = veryfiLensSettings.emailCCDomain
     private var rotateDocIsOn = veryfiLensSettings.rotateDocIsOn
-    private var shieldProtectionIsOn = veryfiLensSettings.shieldProtectionIsOn
     private var autoDeleteAfterProcessing = veryfiLensSettings.autoDeleteAfterProcessing
     private var boostModeIsOn = veryfiLensSettings.boostModeIsOn
     private var boundingBoxesIsOn = veryfiLensSettings.boundingBoxesIsOn
@@ -128,7 +127,6 @@ class MainActivity : AppCompatActivity() {
         viewBinding.switchDictate.isChecked = dictateIsOn
         viewBinding.switchEmailCc.isChecked = emailCCIsOn
         viewBinding.switchRotateDoc.isChecked = rotateDocIsOn
-        viewBinding.switchShieldProtection.isChecked = shieldProtectionIsOn
         viewBinding.switchAutoDeleteProcessing.isChecked = autoDeleteAfterProcessing
         viewBinding.switchBoostMode.isChecked = boostModeIsOn
         viewBinding.switchBoundingBoxes.isChecked = boundingBoxesIsOn
@@ -266,10 +264,6 @@ class MainActivity : AppCompatActivity() {
 
         viewBinding.switchRotateDoc.setOnCheckedChangeListener { _, isChecked ->
             rotateDocIsOn = isChecked
-        }
-
-        viewBinding.switchShieldProtection.setOnCheckedChangeListener { _, isChecked ->
-            shieldProtectionIsOn = isChecked
         }
 
         viewBinding.switchAutoDeleteProcessing.setOnCheckedChangeListener { _, isChecked ->
@@ -562,7 +556,6 @@ class MainActivity : AppCompatActivity() {
         veryfiLensSettings.emailCCIsOn = emailCCIsOn
         veryfiLensSettings.emailCCDomain = emailCCDomain
         veryfiLensSettings.rotateDocIsOn = rotateDocIsOn
-        veryfiLensSettings.shieldProtectionIsOn = shieldProtectionIsOn
         veryfiLensSettings.autoDeleteAfterProcessing = autoDeleteAfterProcessing
         veryfiLensSettings.boostModeIsOn = boostModeIsOn
         veryfiLensSettings.boundingBoxesIsOn = boundingBoxesIsOn
