@@ -5,11 +5,11 @@ plugins{
 }
 
 android {
-    compileSdk 34
+    compileSdk 36
     defaultConfig {
         applicationId "com.veryfi.lens.longreceipts.demo"
         minSdkVersion 23
-        targetSdk 34
+        targetSdk 36
         versionCode 1
         versionName "1.0"
         buildConfigField 'String', 'VERYFI_CLIENT_ID', "\"${System.getenv("VERYFI_CLIENT_ID")}\""
@@ -50,7 +50,7 @@ android {
 
 dependencies {
     // Veryfi lens
-    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:2.1.0.25'
+    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:2.1.0.28'
 
     // noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
