@@ -46,7 +46,7 @@ android {
 
 dependencies {
     // Veryfi lens
-    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:2.1.0.44'
+    implementation 'com.veryfi.lens:veryfi-lens-long-receipts-sdk:2.1.0.45'
 
     // noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
