@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
     private var boostModeIsOn = veryfiLensSettings.boostModeIsOn
     private var boundingBoxesIsOn = veryfiLensSettings.boundingBoxesIsOn
     private var detectBlurResponseIsOn = veryfiLensSettings.detectBlurResponseIsOn
-    private var isProduction = veryfiLensSettings.isProduction
     private var confidenceDetailsIsOn = veryfiLensSettings.confidenceDetailsIsOn
     private var parseAddressIsOn = veryfiLensSettings.parseAddressIsOn
     private var externalId = veryfiLensSettings.externalId ?: ""
@@ -132,7 +131,6 @@ class MainActivity : AppCompatActivity() {
         viewBinding.switchBoostMode.isChecked = boostModeIsOn
         viewBinding.switchBoundingBoxes.isChecked = boundingBoxesIsOn
         viewBinding.switchDetectBlurResponse.isChecked = detectBlurResponseIsOn
-        viewBinding.switchIsProduction.isChecked = isProduction
         viewBinding.switchConfidenceDetails.isChecked = confidenceDetailsIsOn
         viewBinding.switchParseAddress.isChecked = parseAddressIsOn
         viewBinding.switchIgnoreRemoteSettings.isChecked = ignoreRemoteSettings
@@ -282,10 +280,6 @@ class MainActivity : AppCompatActivity() {
 
         viewBinding.switchDetectBlurResponse.setOnCheckedChangeListener { _, isChecked ->
             detectBlurResponseIsOn = isChecked
-        }
-
-        viewBinding.switchIsProduction.setOnCheckedChangeListener { _, isChecked ->
-            isProduction = isChecked
         }
 
         viewBinding.switchConfidenceDetails.setOnCheckedChangeListener { _, isChecked ->
@@ -566,7 +560,6 @@ class MainActivity : AppCompatActivity() {
         veryfiLensSettings.boostModeIsOn = boostModeIsOn
         veryfiLensSettings.boundingBoxesIsOn = boundingBoxesIsOn
         veryfiLensSettings.detectBlurResponseIsOn = detectBlurResponseIsOn
-        veryfiLensSettings.isProduction = isProduction
         veryfiLensSettings.confidenceDetailsIsOn = confidenceDetailsIsOn
         veryfiLensSettings.parseAddressIsOn = parseAddressIsOn
         veryfiLensSettings.gpuIsOn = gpuIsOn
